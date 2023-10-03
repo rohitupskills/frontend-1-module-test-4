@@ -10,11 +10,13 @@ header{
     position: sticky;
     top: 0px;
     padding: 15px 108px;
+    z-index: 1;
 }
 nav{
     display: flex !important;
     justify-content: space-evenly !important;
      align-items: center;
+     z-index: 1;
 }
 .logo-section{
         margin-left:30px;
@@ -68,10 +70,11 @@ height: 35px;
     width: 30vw;
 }
 .announcment-bar{
-    position: fixed;
+    position: sticky;
     top: 85px;
     width: 100%;
     background: var(--primaryskyblue, #2F80ED) !important;
+    z-index: 1;
 }
 /* hero section start */
 .hero-left{
@@ -79,8 +82,9 @@ height: 35px;
 }
 .arrow-image{
     position: absolute;
-    bottom: 151px;
-    right: -50px;
+    bottom: 179px;
+    right: -56px;
+    z-index: -1;
 }
 .hero-left h1{
     color: var(--BLACK, #2B2F34);
@@ -173,6 +177,7 @@ line-height: 150%; /* 24px */
 .border-round{
     border-radius: 20px;
     padding: 30px;
+   
 }
 .form-input{
     width: 80%;
@@ -439,6 +444,7 @@ line-height: 150%; /* 24px */
 
     header>nav{
         flex-direction: column !important;
+        
     }
     header{
         width: 100vw;
@@ -452,6 +458,7 @@ line-height: 150%; /* 24px */
     }
     .menu-item ul{
         flex-direction: column;
+        gap: 10px;
     }
     .announcment-bar{
         /* position: static; */
@@ -459,6 +466,21 @@ line-height: 150%; /* 24px */
     }
     .bottom-padding{
         flex-direction: column;
+        gap: 10px;
+    }
+    .hero-left{
+        position: static;
+    }
+    .arrow-image{
+        display: none;
+    }
+    .hero-left h1{
+      text-align: center;
+      margin-top: 10px !important;
+    }
+    .description {
+        max-width: 288px;
+        text-align: center;
     }
     .hero-last-section{
         text-align: center;
@@ -467,8 +489,28 @@ line-height: 150%; /* 24px */
         flex-direction: column;
     }
     .image1{
-        flex-direction: column !important;
+        display: flex;
+        /* flex-direction: column !important; */
         width: 50%;
+        /* gap: 10px !important; */
         margin-inline: auto;
     }
+    .course-card{
+        width: 59%;
+        left: 80px;
+    }
+    .partner-imge {
+        flex-shrink: 0;
+        width: 50%;
+        max-width: 27%;
+        /* padding-right: calc(var(--bs-gutter-x) * .5); */
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-top: var(--bs-gutter-y);
+    }
+    .course-card-template{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+   
 }
